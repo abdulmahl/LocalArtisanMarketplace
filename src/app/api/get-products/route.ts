@@ -1,0 +1,23 @@
+import { NextResponse } from "next/server";
+import { db } from "@/db";
+import { product } from "@/db/schema";
+
+export async function GET() {
+  try {
+    const products = await db.select().from(product);
+    return NextResponse.json(products);
+  } catch (error: unknown) {
+    // Type assertion: we assert that the error is an instance of Error
+    if (error instanceof Error) {
+      return NextResponse.json(
+        { error: "Failed to fetch products", details: error.message },
+        { status: 500 }
+      );
+    }
+    // In case the error isn't an instance of Error, return a generic message
+    return NextResponse.json(
+      { error: "Failed to fetch products", details: "Unknown error occurred" },
+      { status: 500 }
+    );
+  }
+}
