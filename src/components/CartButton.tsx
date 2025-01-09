@@ -5,7 +5,6 @@ import { ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCartStore } from "@/lib/cartStore";
 import { useRouter } from "next/navigation";
-import { user } from "@/db/schema";
 
 export function CartButton() {
   const router = useRouter();

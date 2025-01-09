@@ -40,10 +40,6 @@ function parseJwt(token: string) {
   return JSON.parse(jsonPayload);
 }
 
-type ErrorWrapperProps = {
-  errMessage: string | undefined;
-};
-
 const ErrorWrapper = ({ message }: { message: string | null | undefined }) =>
   message ? (
     <p className="text-red-500 text-sm font-semibold mt-3 flex gap-1 items-start md:items-center">

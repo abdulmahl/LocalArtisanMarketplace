@@ -9,7 +9,6 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import AddtoBagButton from "./AddtoBagButton";
-import { Skeleton } from "./ui/skeleton";
 import { SkeletonCard } from "./SkeletonCard";
 
 type Product = {

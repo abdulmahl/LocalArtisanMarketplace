@@ -32,9 +32,9 @@ export const useCartStore = create<CartState & Actions>((set) => ({
 
   reset: async () => {},
 
-  incrementByFive: async (qty: number) => {},
+  incrementByFive: async () => {},
 
-  decrementByFive: async (qty: number) => {},
+  decrementByFive: async () => {},
 
   // increment: () => set((state) => ({ count: state.count + 1 })),
   // decrement: () =>

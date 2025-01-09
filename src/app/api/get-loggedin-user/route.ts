@@ -39,7 +39,7 @@ export async function GET(req: Request) {
     }
 
     // Exclude the password field from the response
-    const { password, ...userWithoutPassword } = loggedInUser;
+    const { ...userWithoutPassword } = loggedInUser;
 
     // Add the role to the response
     const responsePayload = {

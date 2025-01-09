@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 import Header from "./Header";
 import CTAButton from "./CTAButton";
 
