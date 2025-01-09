@@ -11,7 +11,7 @@ export default function SellerForm() {
   });
 
   const handleImageUpload = async (ev: FormEvent) => {
-    const file = ev.target.files[0];
+    const file = (ev.target as HTMLInputElement).files![0];
     const formData = new FormData();
     formData.append("file", file);
     formData.append("upload_preset", "your_upload_preset");
