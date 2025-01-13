@@ -44,7 +44,7 @@ export default function Profile() {
         lgTitle={
           loading ? "Loading your profile..." : `Ola ${userData?.firstName}`
         }
-        smTitle={loading ? "Loading your profile..." : `${userData?.firstName}`}
+        smTitle={loading ? "Loading..." : `${userData?.firstName}`}
       />
       <p className="mt-[5rem] p-5 text-xl">Your Profile</p>
     </div>
